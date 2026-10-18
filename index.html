@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NEXÀFRI — L’Afrique connectée aux opportunités</title>
+<style>
+:root{--n:#07152f;--b:#1478ff;--v:#8a35f5;--g:#13b981;--o:#ff8b22}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f7fc;color:#14213d}
+header{background:var(--n);color:white;padding:18px;display:flex;align-items:center;gap:12px}
+.logo{font-size:26px;font-weight:900}.a{color:#a43bfa}.afri{color:#08c8b2}
+.globe{font-size:32px}
+header small{display:block;font-size:11px;color:#cbd8ef;margin-top:4px}
+nav{display:flex;gap:8px;padding:12px;background:white;overflow:auto}
+button{cursor:pointer;border:0;border-radius:10px;padding:11px 13px;font-weight:bold}
+nav button{background:#edf1f8;color:#243653;white-space:nowrap}
+nav button.active,.primary{background:linear-gradient(110deg,var(--v),#b535ed);color:white}
+main{max-width:850px;margin:18px auto;padding:0 13px}
+.page{display:none}.page.active{display:block}
+.hero{background:linear-gradient(120deg,#07152f,#17417d);color:white;border-radius:18px;padding:24px}
+h1{font-size:30px;margin:0 0 12px}.hero h1 span{color:#36dfd1}
+p{line-height:1.5}.hero p{color:#d6e3f8}
+.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:14px 0}
+.cat{background:white;border:1px solid #e3e8f0;text-align:center;padding:13px 4px;border-radius:14px}
+.cat span{display:block;font-size:24px;margin-bottom:7px}.cat b{font-size:12px}
+.card{background:white;padding:16px;border:1px solid #e3e8f0;border-radius:15px;margin:12px 0}
+.need{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.need div{padding:15px;border-radius:14px;background:linear-gradient(135deg,#6428dc,#a63de8);color:white}
+.need div+div{background:linear-gradient(135deg,#0c4c94,#087eaa)}
+.need button{background:#ffffff22;color:white;border:1px solid #ffffff66}
+h2{font-size:19px}.meta{font-size:12px;color:#6c7b95}
+.badge{display:inline-block;border-radius:5px;color:white;padding:4px 7px;font-size:10px;font-weight:bold}
+.job{background:var(--b)}.product{background:var(--g)}.help{background:var(--o)}.training{background:var(--v)}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.actions button{background:#f0f3f9;color:#33445f}
+input,textarea,select{width:100%;padding:12px;border:1px solid #dce3ee;border-radius:10px;margin:7px 0 13px;font:inherit}
+textarea{min-height:100px}
+.primary{margin:6px 0}
+.profile{background:linear-gradient(120deg,#07152f,#17417d);color:white}
+.skills span{display:inline-block;background:#edf1f8;color:#33445f;border-radius:20px;padding:8px;margin:4px;font-size:12px}
+footer{text-align:center;padding:24px;color:#7a879b;font-size:11px}
+@media(max-width:450px){h1{font-size:26px}.categories{gap:5px}.cat{padding:10px 2px}.cat b{font-size:10px}.need{gap:7px}.need div{padding:11px}}
+</style>
+</head>
+<body>
+<header>
+<div class="globe">🌐</div>
+<div><div class="logo">NEX<span class="a">À</span><span class="afri">FRI</span></div>
+<small>L’Afrique connectée aux opportunités.</small></div>
+</header>
+<nav>
+<button class="active" data-page="home">🏠 Accueil</button>
+<button data-page="explore">🌍 Explorer</button>
+<button data-page="publish">＋ Publier</button>
+<button data-page="messages">💬 Messages</button>
+<button data-page="profile">👤 Profil</button>
+</nav>
+<main>
+<section id="home" class="page active">
+<div class="hero">
+<h1>Des opportunités<br>pour une <span>Afrique plus forte.</span></h1>
+<p>Travailler. Entreprendre. S’entraider. Évoluer ensemble, en Afrique et dans sa diaspora.</p>
+<button class="primary" data-open="explore">Explorer les opportunités →</button>
+<button data-open="publish">＋ Publier une annonce</button>
+</div>
+<div class="categories">
+<button class="cat" data-filter="Travail"><span>💼</span><b>Emplois</b></button>
+<button class="cat" data-filter="Commerce"><span>🛒</span><b>Produits</b></button>
+<button class="cat" data-filter="Solidarité"><span>💗</span><b>Projets</b></button>
+<button class="cat" data-filter="Formation"><span>🎓</span><b>Formation</b></button>
+</div>
+<div class="need">
+<div><h3>J’ai besoin de…</h3><p>Un emploi, un produit, une aide ou un partenaire.</p><button data-open="explore">Trouver →</button></div>
+<div><h3>Je peux offrir…</h3><p>Mes compétences, mes produits ou mon aide.</p><button data-open="publish">Partager →</button></div>
+</div>
+<h2>Publications de la communauté</h2>
+<div id="feed">
+<article class="card" data-cat="Commerce"><span class="badge product">COMMERCE</span><h3>Fatou Créations — sacs artisanaux</h3><p>Découvrez des sacs fabriqués à la main avec des matériaux locaux au Cap-Vert. Soutenons l’artisanat africain !</p><div class="meta">📍 Praia, Cap-Vert</div><div class="actions"><button class="like">♡ J’aime <span>12</span></button><button class="comment">💬 Commenter</button></div></article>
+<article class="card" data-cat="Travail"><span class="badge job">TRAVAIL</span><h3>Technicien de maintenance CVC recherché</h3><p>Une entreprise recherche un technicien en climatisation et ventilation.</p><div class="meta">📍 Dakar, Sénégal</div><div class="actions"><button class="like">♡ J’aime <span>8</span></button><button class="comment">💬 Commenter</button></div></article>
+<article class="card" data-cat="Solidarité"><span class="badge help">SOLIDARITÉ</span><h3>Une école a besoin de soutien</h3><p>Un projet d’installation solaire cherche des partenaires et du matériel.</p><div class="meta">📍 Saint-Louis, Sénégal</div><div class="actions"><button class="like">♡ J’aime <span>24</span></button><button class="comment">💬 Commenter</button></div></article>
+</div>
+</section>
+<section id="explore" class="page">
+<h1>Explorer l’Afrique 🌍</h1><p>Découvre les opportunités et les talents de la communauté.</p>
+<input id="search" placeholder="Rechercher un emploi, un produit, un pays…">
+<div class="actions"><button data-filter="Tout">Tout</button><button data-filter="Travail">Emplois</button><button data-filter="Commerce">Produits</button><button data-filter="Solidarité">Projets</button><button data-filter="Formation">Formations</button></div>
+<div class="card" style="background:linear-gradient(130deg,#07152f,#17417d);color:white;text-align:center"><div style="font-size:55px">🌍</div><h2>L’Afrique connectée</h2><p>Sénégal · Cap-Vert · Côte d’Ivoire · Maroc · Angola · Kenya</p></div>
+<div id="exploreList"></div>
+</section>
+<section id="publish" class="page">
+<h1>Publier sur NEXÀFRI</h1><p>Partage une offre avec la communauté.</p>
+<div class="card"><form id="form">
+<label>Catégorie</label><select id="category"><option>Travail</option><option>Commerce</option><option>Solidarité</option><option>Formation</option></select>
+<label>Titre</label><input id="title" required placeholder="Ex. Technicien CVC recherché">
+<label>Description</label><textarea id="description" required placeholder="Présente ton offre ou ton projet…"></textarea>
+<label>Ville ou pays</label><input id="location" placeholder="Ex. Praia, Dakar, Paris">
+<button class="primary" type="submit">Publier la démo →</button>
+<p class="meta">Cette version est une démonstration : les publications ne sont pas encore partagées sur Internet.</p>
+</form></div>
+</section>
+<section id="messages" class="page">
+<h1>Messages 💬</h1><div class="card"><h3>Fatou Créations</h3><p>Bonjour ! Merci de votre intérêt pour nos produits.</p></div><div class="card"><h3>Association Soleil</h3><p>Nous cherchons des partenaires pour notre projet scolaire.</p></div><p class="meta">La messagerie réelle sera ajoutée dans une prochaine version.</p>
+</section>
+<section id="profile" class="page">
+<div class="card profile"><div style="font-size:40px">👤</div><h1>Mon Passeport d’Impact</h1><h2>Mon profil NEXÀFRI</h2><p>Technicien CVC · Entrepreneur</p><p>🌍 Connecté à l’Afrique et à sa diaspora</p></div>
+<div class="card"><h2>Mes compétences</h2><div class="skills"><span>CVC</span><span>Climatisation</span><span>Ventilation</span><span>Maintenance</span><span>Gestion de projet</span></div><button id="addSkill">＋ Ajouter une compétence</button></div>
+<div class="card"><h2>Mes engagements</h2><p>🌱 Environnement　📚 Éducation　🎓 Formation　💗 Entraide</p></div>
+</section>
+</main>
+<footer>NEXÀFRI · Prototype en développement · Bleu nuit, violet, bleu, vert et orange.</footer>
+<script>
+function openPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===id));document.querySelectorAll('[data-page]').forEach(b=>b.classList.toggle('active',b.dataset.page===id));window.scrollTo(0,0);if(id==='explore')renderExplore()}
+document.querySelectorAll('[data-page]').forEach(b=>b.onclick=()=>openPage(b.dataset.page));
+document.querySelectorAll('[data-open]').forEach(b=>b.onclick=()=>openPage(b.dataset.open));
+function filter(cat){document.querySelectorAll('#feed article').forEach(a=>a.hidden=cat!=='Tout'&&a.dataset.cat!==cat);openPage('home')}
+document.querySelectorAll('[data-filter]').forEach(b=>b.onclick=()=>{let c=b.dataset.filter;if(c==='Tout')c='Tout';filter(c)});
+function bindLikes(root=document){root.querySelectorAll('.like').forEach(b=>{if(b.dataset.bound)return;b.dataset.bound='1';b.onclick=()=>{let s=b.querySelector('span'),liked=b.dataset.liked==='1';b.dataset.liked=liked?'0':'1';s.textContent=Number(s.textContent)+(liked?-1:1);b.firstChild.textContent=liked?'♡ J’aime ':'♥ J’aime '}})}
+bindLikes();
+document.querySelectorAll('.comment').forEach(b=>b.onclick=()=>alert('Les commentaires seront disponibles dans la version connectée.'));
+function renderExplore(){let list=document.getElementById('exploreList');list.innerHTML='';document.querySelectorAll('#feed article').forEach(a=>{let c=a.cloneNode(true);c.hidden=false;c.className='card';list.appendChild(c)});bindLikes(list);list.querySelectorAll('.comment').forEach(b=>b.onclick=()=>alert('Commentaires bientôt disponibles.'));searchExplore()}
+function searchExplore(){let q=(document.getElementById('search').value||'').toLocaleLowerCase('fr');document.querySelectorAll('#exploreList article').forEach(a=>a.hidden=!a.innerText.toLocaleLowerCase('fr').includes(q))}
+document.getElementById('search').addEventListener('input',searchExplore);
+document.getElementById('form').onsubmit=e=>{e.preventDefault();let cat=document.getElementById('category').value,title=document.getElementById('title').value,desc=document.getElementById('description').value,loc=document.getElementById('location').value||'Lieu non précisé';let cls=cat==='Travail'?'job':cat==='Commerce'?'product':cat==='Solidarité'?'help':'training';let art=document.createElement('article');art.className='card';art.dataset.cat=cat;let badge=document.createElement('span');badge.className='badge '+cls;badge.textContent=cat.toUpperCase();let h=document.createElement('h3');h.textContent=title;let p=document.createElement('p');p.textContent=desc;let m=document.createElement('div');m.className='meta';m.textContent='📍 '+loc+' · Ma publication';let actions=document.createElement('div');actions.className='actions';actions.innerHTML='<button class="like">♡ J’aime <span>0</span></button><button class="comment">💬 Commenter</button>';art.append(badge,h,p,m,actions);document.getElementById('feed').prepend(art);bindLikes(art);actions.querySelector('.comment').onclick=()=>alert('Commentaires bientôt disponibles.');e.target.reset();openPage('home');alert('Publication ajoutée à la démo !')};
+document.getElementById('addSkill').onclick=()=>{let s=prompt('Quelle compétence veux-tu ajouter ?');if(s){let x=document.createElement('span');x.textContent=s;document.querySelector('.skills').appendChild(x)}};
+</script>
+</body>
+</html>
